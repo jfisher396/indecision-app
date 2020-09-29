@@ -10,14 +10,21 @@ var appInfo = {
 
 var onFormSubmit = function onFormSubmit(e) {
   e.preventDefault();
-
+  //gets the value from the input named "option"
   var option = e.target.elements.option.value;
-
+  //checks for a value in the input named "option" before pushing that value onto the options array.
   if (option) {
     appInfo.options.push(option);
-    e.target.elements.option.value = '';
+    //clears out the input of the form
+    e.target.elements.option.value = "";
     render();
   }
+};
+
+var clearArr = function clearArr(e) {
+  e.preventDefault();
+  appInfo.options = [];
+  render();
 };
 
 var appRoot = document.getElementById("app");
@@ -45,6 +52,11 @@ var render = function render() {
       "p",
       null,
       appInfo.options.length
+    ),
+    React.createElement(
+      "button",
+      { onClick: clearArr },
+      "Remove All"
     ),
     React.createElement(
       "ol",

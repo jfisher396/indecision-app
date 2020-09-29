@@ -19,8 +19,7 @@ const onFormSubmit = (e) => {
   }
 };
 
-const clearArr = (e) => {
-  e.preventDefault();
+const clearArr = () => {
   appInfo.options = [];
   render()
 }
@@ -32,12 +31,15 @@ const render = () => {
     <div>
       <h1>{appInfo.title}</h1>
       {appInfo.subtitle && <p>{appInfo.subtitle}</p>}
-      <p>{appInfo.options.length > 0 ? "Here are your options" : "No options"}</p>
+      <p>
+        {appInfo.options.length > 0 ? "Here are your options" : "No options"}
+      </p>
       <p>{appInfo.options.length}</p>
       <button onClick={clearArr}>Remove All</button>
       <ol>
-        <li>Item one</li>
-        <li>Item two</li>
+        {appInfo.options.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
       </ol>
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option" />

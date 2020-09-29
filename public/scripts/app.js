@@ -21,8 +21,7 @@ var onFormSubmit = function onFormSubmit(e) {
   }
 };
 
-var clearArr = function clearArr(e) {
-  e.preventDefault();
+var clearArr = function clearArr() {
   appInfo.options = [];
   render();
 };
@@ -61,16 +60,13 @@ var render = function render() {
     React.createElement(
       "ol",
       null,
-      React.createElement(
-        "li",
-        null,
-        "Item one"
-      ),
-      React.createElement(
-        "li",
-        null,
-        "Item two"
-      )
+      appInfo.options.map(function (item) {
+        return React.createElement(
+          "li",
+          { key: item },
+          item
+        );
+      })
     ),
     React.createElement(
       "form",

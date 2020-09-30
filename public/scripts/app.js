@@ -20,10 +20,16 @@ var onFormSubmit = function onFormSubmit(e) {
     render();
   }
 };
-
-var clearArr = function clearArr() {
+//clears out all items in the options array upon button click
+var onClearArr = function onClearArr() {
   appInfo.options = [];
   render();
+};
+
+var onMakeDecision = function onMakeDecision() {
+  var randomNum = Math.floor(Math.random() * appInfo.options.length);
+  var option = appInfo.options[randomNum];
+  alert(option);
 };
 
 var appRoot = document.getElementById("app");
@@ -48,13 +54,13 @@ var render = function render() {
       appInfo.options.length > 0 ? "Here are your options" : "No options"
     ),
     React.createElement(
-      "p",
-      null,
-      appInfo.options.length
+      "button",
+      { disabled: appInfo.options.length === 0, onClick: onMakeDecision },
+      "What should I do?"
     ),
     React.createElement(
       "button",
-      { onClick: clearArr },
+      { onClick: onClearArr },
       "Remove All"
     ),
     React.createElement(

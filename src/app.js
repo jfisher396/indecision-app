@@ -18,12 +18,14 @@ const onFormSubmit = (e) => {
     render();
   }
 };
+
 //clears out all items in the options array upon button click
 const onClearArr = () => {
   appInfo.options = [];
   render()
 };
 
+//randomly chooses between items in the options array
 const onMakeDecision = () => {
   const randomNum = Math.floor(Math.random() * appInfo.options.length);
   const option = appInfo.options[randomNum];
@@ -40,6 +42,7 @@ const render = () => {
       <p>
         {appInfo.options.length > 0 ? "Here are your options" : "No options"}
       </p>
+      {/* hides choice button if there are no items in the options array */}
       <button disabled={appInfo.options.length===0} onClick={onMakeDecision}>What should I do?</button>
       <button onClick={onClearArr}>Remove All</button>
       <ol>

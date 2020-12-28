@@ -20,12 +20,14 @@ var onFormSubmit = function onFormSubmit(e) {
     render();
   }
 };
+
 //clears out all items in the options array upon button click
 var onClearArr = function onClearArr() {
   appInfo.options = [];
   render();
 };
 
+//randomly chooses between items in the options array
 var onMakeDecision = function onMakeDecision() {
   var randomNum = Math.floor(Math.random() * appInfo.options.length);
   var option = appInfo.options[randomNum];

@@ -21,9 +21,18 @@ var Header = function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement(
-        'p',
+        'div',
         null,
-        'This is the header'
+        React.createElement(
+          'h1',
+          null,
+          'Indecision'
+        ),
+        React.createElement(
+          'h2',
+          null,
+          'Put your life in the hands of a computer'
+        )
       );
     }
   }]);
@@ -58,11 +67,67 @@ var Action = function (_React$Component2) {
   return Action;
 }(React.Component);
 
+var Options = function (_React$Component3) {
+  _inherits(Options, _React$Component3);
+
+  function Options() {
+    _classCallCheck(this, Options);
+
+    return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+  }
+
+  _createClass(Options, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'h1',
+          null,
+          'Options component'
+        )
+      );
+    }
+  }]);
+
+  return Options;
+}(React.Component);
+
+var AddOption = function (_React$Component4) {
+  _inherits(AddOption, _React$Component4);
+
+  function AddOption() {
+    _classCallCheck(this, AddOption);
+
+    return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
+  }
+
+  _createClass(AddOption, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'h1',
+          null,
+          'Add Option div'
+        )
+      );
+    }
+  }]);
+
+  return AddOption;
+}(React.Component);
+
 var jsx = React.createElement(
   'div',
   null,
   React.createElement(Header, null),
-  React.createElement(Action, null)
+  React.createElement(Action, null),
+  React.createElement(Options, null),
+  React.createElement(AddOption, null)
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));

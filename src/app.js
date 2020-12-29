@@ -1,6 +1,11 @@
 class Header extends React.Component {
   render() {
-    return <p>This is the header</p>
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    )
   }
 }
 
@@ -14,10 +19,32 @@ class Action extends React.Component {
   }
 }
 
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Options component</h1>
+      </div>
+    )
+  }
+}
+
+class AddOption extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Add Option div</h1>
+      </div>
+    )
+  }
+}
+
 const jsx = (
   <div>
     <Header />
     <Action />
+    <Options />
+    <AddOption />
   </div>
 );
 

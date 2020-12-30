@@ -44,8 +44,14 @@ class Action extends React.Component {
 
 class Options extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
+
   handleRemoveAll() {
-    alert("handleRemoveAll")
+    alert("handleRemoveAll");
+    console.log(this.props.options)
   }
 
   render() {
@@ -69,10 +75,27 @@ class Option extends React.Component {
 }
 
 class AddOption extends React.Component {
+
+  handleAddOption(e) {
+    e.preventDefault();
+    //gets the value from the input named "option"
+    const option = e.target.elements.option.value.trim();
+    //checks for a value in the input named "option" before pushing that value onto the options array.
+    if (option) {
+      alert("option added");
+    // appInfo.options.push(option);
+    //clears out the input of the form
+    e.target.elements.option.value = "";
+  }
+}
+
   render() {
     return (
       <div>
-        <h1>Add Option div</h1>
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option" />
+          <button>Add Option</button>
+        </form>
       </div>
     )
   }

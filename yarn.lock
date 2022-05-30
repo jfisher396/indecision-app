@@ -429,6 +429,11 @@
   "resolved" "https://registry.npmjs.org/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz"
   "version" "6.13.0"
 
+"babel-plugin-syntax-class-properties@^6.8.0":
+  "integrity" "sha512-chI3Rt9T1AbrQD1s+vxw3KcwC9yHtF621/MacuItITfZX344uhQoANjpoSJZleAmW2tjlolqB/f+h7jIqXa7pA=="
+  "resolved" "https://registry.npmjs.org/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz"
+  "version" "6.13.0"
+
 "babel-plugin-syntax-exponentiation-operator@^6.8.0":
   "integrity" "sha1-nufoM3KQ2pUoggGmpX9BcDF4MN4="
   "resolved" "https://registry.npmjs.org/babel-plugin-syntax-exponentiation-operator/-/babel-plugin-syntax-exponentiation-operator-6.13.0.tgz"
@@ -457,6 +462,16 @@
     "babel-helper-remap-async-to-generator" "^6.24.1"
     "babel-plugin-syntax-async-functions" "^6.8.0"
     "babel-runtime" "^6.22.0"
+
+"babel-plugin-transform-class-properties@^6.24.1":
+  "integrity" "sha512-n4jtBA3OYBdvG5PRMKsMXJXHfLYw/ZOmtxCLOOwz6Ro5XlrColkStLnz1AS1L2yfPA9BKJ1ZNlmVCLjAL9DSIg=="
+  "resolved" "https://registry.npmjs.org/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz"
+  "version" "6.24.1"
+  dependencies:
+    "babel-helper-function-name" "^6.24.1"
+    "babel-plugin-syntax-class-properties" "^6.8.0"
+    "babel-runtime" "^6.22.0"
+    "babel-template" "^6.24.1"
 
 "babel-plugin-transform-es2015-arrow-functions@^6.22.0":
   "integrity" "sha1-RSaSy3EdX3ncf4XkQM5BufJE0iE="
